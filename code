@@ -1,0 +1,58 @@
+# "Friendly" Greeting
+print('Yo loser, Imagine using a calculator. But anyways')
+
+# While loop for operations
+while True:
+    num1 = float(input('Enter your first number: '))
+    operation = input('Please choose your operation (Options: +, -, *, /, ^, sqrt, %): ')
+    num2 = float(input("Enter your second number (Put 0 if you're calculating square root): "))
+
+# Addition
+    if operation == '+':
+        print(num1 + num2)
+        
+# Subtraction
+    elif operation == '-':
+        if num2 > num1:
+            print('The second number is greater. Do you want the result to be negative? (yes/no): ')
+            choice = input()
+            if choice.lower() == 'yes':
+                print(num1 - num2)
+            else:
+                print(num2 - num1)
+        else:
+            print(num1 - num2)
+
+# Multiplication
+    elif operation == '*':
+        print(num1 * num2)
+        
+# Devision
+    elif operation == '/':
+        if num2 == 0:
+            print('You dumbass, Division by 0 is currently undefined')
+        else:
+            print(num1 / num2)
+            
+# Percentage            
+    elif operation == '%':
+        if num2 == 0:
+            print("You can't find the percentage out of 0 idiot.")
+        else:
+            percentage = num1 / num2 * 100
+            print(print(f'{num1: .0f} is {percentage:.2f}% of {num2: .0f}'))
+            
+# Square
+    elif operation == '^':
+        print(num1 ** num2)
+        
+# Square Root
+    elif operation == 'sqrt':
+        if num1 < 0:
+            print("Can't find square root of negative numbers")
+        else:
+            print(num1 ** 0.5)
+        
+# Invalid Operation
+    else:
+        print('Invalid operation. Please choose a valid operation.')
