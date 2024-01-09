@@ -3,9 +3,12 @@ print('Yo loser, Imagine using a calculator. But anyways')
 
 # While loop for operations
 while True:
-    num1 = float(input('Enter your first number: '))
+    num1 = float(input('Enter a number: '))
     operation = input('Please choose your operation (Options: +, -, *, /, ^, sqrt, %): ')
-    num2 = float(input("Enter your second number (Put 0 if you're calculating square root): "))
+    if operation == 'sqrt':
+        print('')
+    else:
+        num2 = float(input("Enter another number: "))
 
 # Addition
     if operation == '+':
@@ -30,7 +33,7 @@ while True:
 # Devision
     elif operation == '/':
         if num2 == 0:
-            print('You dumbass, Division by 0 is currently undefined')
+            print('Division by 0 is currently undefined')
         else:
             print(num1 / num2)
             
@@ -42,7 +45,7 @@ while True:
             percentage = num1 / num2 * 100
             print(print(f'{num1: .0f} is {percentage:.2f}% of {num2: .0f}'))
             
-# Square
+# Power Notation
     elif operation == '^':
         print(num1 ** num2)
         
