@@ -1,5 +1,12 @@
 # "Friendly" Greeting
-print('Yo loser, Imagine using a calculator. But anyways')
+print('Imagine using a calculator. But anyways')
+
+# Factorial Function
+def factorial(num1):
+    if num1 == 0 or num1 == 1:
+        return 1
+    else:
+        return num1*factorial(num1-1)
 
 # While loop for operations
 while True:
@@ -7,6 +14,8 @@ while True:
     operation = input('Please choose your operation (Options: +, -, *, /, ^, sqrt, %): ')
     if operation == 'sqrt':
         print('')
+    elif operation == '!':
+        pass
     else:
         num2 = float(input("Enter another number: "))
 
@@ -55,6 +64,13 @@ while True:
             print("Can't find square root of negative numbers")
         else:
             print(num1 ** 0.5)
+# Factorials
+    elif operation == '!':
+        if num1 < 0:
+            print('Are you sure about that?')
+        
+        else:
+            print(factorial(num1))
         
 # Invalid Operation
     else:
