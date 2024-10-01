@@ -11,7 +11,7 @@ def factorial(num1):
 # While loop for operations
 while True:
     num1 = float(input('Enter a number: '))
-    operation = input('Please choose your operation (Options: +, -, *, /, ^, sqrt, %): ')
+    operation = input('Please choose your operation (Options: +, -, *, /, ^, sqrt, %, !): ')
     if operation == 'sqrt':
         print('')
     elif operation == '!':
